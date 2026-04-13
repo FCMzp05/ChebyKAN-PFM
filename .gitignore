@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.Python
+*.npz
+*.png
+*.csv
+*.pth
+*.msh
+results/
+results_*/
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+dist/
+build/

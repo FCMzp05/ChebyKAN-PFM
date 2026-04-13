@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chebykan-dem"
+version = "0.1.0"
+description = "ChebyKAN deep energy method for phase-field fracture on triangular meshes"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.20",
+  "torch>=2.0",
+  "matplotlib>=3.5",
+  "gmsh>=4.11",
+]
+
+[project.scripts]
+chebykan-dem = "chebykan_dem.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["chebykan_dem*"]
