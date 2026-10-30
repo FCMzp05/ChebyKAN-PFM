@@ -11,7 +11,7 @@ The repository contains:
 - a self-contained homogeneous SENT benchmark,
 - several heterogeneous benchmark entry points,
 - a template entry point for user-defined heterogeneous material layouts,
-- result files consistent with the manuscript / revision workflow.
+- result files consistent with the paper.
 
 The homogeneous SENT example can generate its mesh directly in the repository. The heterogeneous benchmark examples read their geometry from a benchmark mesh file named:
 
@@ -24,7 +24,6 @@ Material fields and heterogeneous layouts can be adapted through the case-specif
 ## Install
 
 ```bash
-cd github
 python -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -e .
@@ -37,7 +36,6 @@ A working **Gmsh** installation is required. The Python package `gmsh` wraps the
 Run the homogeneous SENT benchmark first:
 
 ```bash
-cd github
 python examples/run_sent_homogeneous.py
 ```
 
@@ -86,7 +84,7 @@ For `heterogeneous_user`, the CLI points you to `examples/run_heterogeneous_user
 
 ## Output Layout
 
-Each case directory follows the manuscript / revision naming convention:
+Each case directory follows the naming convention used in the paper:
 
 ```text
 <case_dir>/
@@ -141,11 +139,21 @@ This file controls geometry dimensions, loading schedule, network widths, Chebys
 
 ## Citation
 
-This code is associated with a manuscript currently under review at **Journal of the Mechanics and Physics of Solids (JMPS)**:
+If you use this code, please cite:
 
-> Peng Zhang, Keke Tang, and Baixiang Xu. "ChebyKAN-Enhanced Deep Energy Method for Phase Field Fracture: From Homogeneous to Heterogeneous Materials." *Journal of the Mechanics and Physics of Solids* (under review, 2026).
+> P. Zhang, K. Tang, B.-X. Xu. ChebyKAN-enhanced deep energy method for phase field fracture: From homogeneous to heterogeneous materials. *Journal of the Mechanics and Physics of Solids* 214, 106693 (2026). https://doi.org/10.1016/j.jmps.2026.106693
 
-If you find this code helpful in your research, please stay tuned for the official publication. Once the paper is accepted and published, we would greatly appreciate it if you could cite our work accordingly.
+```bibtex
+@article{Zhang2026ChebyKANDEM,
+  author  = {Zhang, Peng and Tang, Keke and Xu, Bai-Xiang},
+  title   = {{ChebyKAN}-enhanced deep energy method for phase field fracture: From homogeneous to heterogeneous materials},
+  journal = {Journal of the Mechanics and Physics of Solids},
+  volume  = {214},
+  pages   = {106693},
+  year    = {2026},
+  doi     = {10.1016/j.jmps.2026.106693}
+}
+```
 
 ## License
 
